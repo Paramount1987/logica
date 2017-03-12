@@ -47,7 +47,7 @@ APP.tabs = {
     selectInputClick: function(){
         let _this = this;
 
-        $('body').on('click', _this.input, function() {
+        $(_this.input).click(function() {
             let $target = $(this);
 
             if(!$target.hasClass('is-open')){
