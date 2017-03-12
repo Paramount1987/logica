@@ -1,0 +1,153 @@
+//---------------------------------
+// Palette
+//---------------------------------
+
+// Black and White
+//---------------------------------
+
+$color-black:                   #000000;
+
+$color-gray--d9:                #050505;
+$color-gray--d8:                #131313;
+$color-gray--d7:                #212121;
+$color-gray--d6:                #383838;
+$color-gray--d5:                #3e3e3e;
+$color-gray--d4:                #4b4b4b;
+$color-gray--d3:                #595959;
+$color-gray--d2:                #666666;
+$color-gray--d1:                #737373;
+
+$color-gray:                    #777777;
+
+$color-gray--l1:                #818181;
+$color-gray--l2:                #8e8e8e;
+$color-gray--l3:                #9a9a9a;
+$color-gray--l4:                #a7a7a7;
+$color-gray--l5:                #b4b4b4;
+$color-gray--l6:                #c1c1c1;
+$color-gray--l7:                #cdcdcd;
+$color-gray--l8:                #d6d6d6;
+$color-gray--l9:                #f7f7f7;
+
+$color-white:                   #ffffff;
+
+// Colors
+//---------------------------------
+
+$color-green:                   #008c00;
+
+$color-red:                     #ff3333;
+$color-red--d1:                 darken($color-red, 10%);
+$color-red--l1:                 lighten($color-red, 10%);
+
+$color-peach:                   #ff5050;
+$color-peach--d1:               darken($color-peach, 10%);
+$color-peach--l1:               lighten($color-peach, 10%);
+
+$color-tan:                     #ffcc99;
+$color-tan--d1:                 darken($color-tan, 10%);
+$color-tan--l1:                 lighten($color-tan, 10%);
+
+$color-brown:                   #663300;
+$color-brown--d1:               darken($color-brown, 10%);
+$color-brown--l1:               lighten($color-brown, 10%);
+
+$color-orange:                  #ff6600;
+$color-orange--d1:              darken($color-orange, 10%);
+$color-orange--l1:              lighten($color-orange, 10%);
+
+$color-amber:                   #fc9906;
+$color-amber--d1:               darken($color-amber, 10%);
+$color-amber--l1:               lighten($color-amber, 10%);
+
+$color-yellow:                  #ffcc00;
+$color-yellow--d1:              darken($color-yellow, 10%);
+$color-yellow--l1:              lighten($color-yellow, 10%);
+
+$color-lime:                    #b8e62e;
+$color-lime--d1:                darken($color-lime, 10%);
+$color-lime--l1:                lighten($color-lime, 10%);
+
+$color-green:                   #228b22;
+$color-green--d1:               darken($color-green, 10%);
+$color-green--l1:               lighten($color-green, 10%);
+
+$color-cyan:                    #48e8c8;
+$color-cyan--d1:                darken($color-cyan, 10%);
+$color-cyan--l1:                lighten($color-cyan, 10%);
+
+$color-blue:                    #0066ff;
+$color-blue--d1:                darken($color-blue, 10%);
+$color-blue--l1:                lighten($color-blue, 10%);
+
+$color-purple:                  #9966ff;
+$color-purple--d1:              darken($color-purple, 10%);
+$color-purple--l1:              lighten($color-purple, 10%);
+
+$color-pink:                    #ff33cc;
+$color-pink--d1:                darken($color-pink, 10%);
+$color-pink--l1:                lighten($color-pink, 10%);
+
+// Color types
+//---------------------------------
+
+$color-default:                 $color-gray--d6;
+$color-primary:                 $color-purple;
+$color-success:                 $color-green;
+$color-info:                    $color-blue;
+$color-important:               $color-yellow;
+$color-warning:                 $color-orange;
+$color-danger:                  $color-red;
+$color-disabled:                $color-gray;
+
+// Extra colors
+//---------------------------------
+
+
+//---------------------------------
+// Screen
+//---------------------------------
+
+$screen-w--s:                   640px; // 640px;
+$screen-w--sx:                  768px; // 768px;
+$screen-w--xl:                  1280px; // 1280px;
+
+//---offsets
+$padding-xl:                    30px; //30px
+//---------------------------------
+// Typography
+//---------------------------------
+
+$font-family--sansSerif:        "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family--serif:            Georgia, 'Times New Roman', Times, serif;
+$font-family--monospace:        Monaco, Menlo, Consolas, 'Courier New', monospace;
+
+$font-family--base:             $font-family--sansSerif;
+$font-family--alt:              $font-family--serif;
+
+$font-size--root:               16px;
+
+$font-size--s:                  12px;
+$font-size--m:                  16px;
+$font-size--l:                  20px;
+
+$line-height--s:                1;
+$line-height--m:                1.35;
+$line-height--l:                1.4;
+
+$font-color:                    $color-default;
+$link-color:                    $color-blue;
+$headings-color:                $color-black;
+
+//---------------------------------
+// Background
+//---------------------------------
+
+$bg-main:                       $color-white;
+
+//---------------------------------
+// Z-index
+//---------------------------------
+
+$zindex-overlay:                5000;
+$zindex-modal:                  7000;

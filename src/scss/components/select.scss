@@ -1,0 +1,205 @@
+.container--select{
+    width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.select-wrap{
+    position: relative;//612 240
+    width: 786px;
+}
+
+.input-wrap{
+    position: relative;
+    &:after{
+        content: '';
+        position: absolute;
+        z-index: 1;
+        top:15px;
+        right:20px;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 8px 5px 0 5px;
+        border-color: #000000 transparent transparent transparent;
+    }
+    &.is-open{
+        &:after{
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 5px 8px 5px;
+            border-color: transparent transparent #898989transparent;
+        }
+    }
+}
+
+.input-select{
+    width: 100%;
+    height: 37px;
+    padding: 0 35px 0 15px;
+    background-color: #f2f2f2;
+    border: 1px solid #c6c6c6;
+    outline: none;
+    font: normal 15px/37px "Helvetica Neue", sans-serif;
+    cursor: pointer;
+}
+
+//---------tabs group
+.tabs-group{
+    position: absolute;
+    z-index: 1;
+    top:40px;
+    left:-2px;
+    width: 612px;
+    height: 242px;
+    display: none;
+    overflow: hidden;
+    box-shadow: 0 5px 20px -9px rgba(0, 0, 0, 0.75);
+    &.is-active{
+        display: block;
+    }
+}
+
+.tabs-controls{
+    position: absolute;
+    z-index: 1;
+    top: 1px;
+    left:2px;
+    bottom: 1px;
+    width: 215px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    > li{
+        margin-bottom: 1px;
+    }
+}
+
+.tabs-controls__item{
+    position: relative;
+    display: table-cell;
+    width: 215px;
+    height: 59px;
+    vertical-align: middle;
+    background-color: #f2f2f2;
+    transition: all ease-out .2s;
+    cursor: pointer;
+    &.is-active,
+    &.is-active:hover{
+        background-color: #fff;
+        color:#c54004;
+    }
+    &.is-checked{
+        &:after{
+            content: '';
+            position: absolute;
+            z-index: 2;
+            top:50%;
+            left:0;
+            width: 0;
+            height: 0;
+            margin-top: -17px;
+            border-style: solid;
+            border-width: 17px 0 17px 12px;
+            border-color: transparent transparent transparent #c54104;
+        }
+    }
+    &:hover{
+        background-color: #4f4e4e;
+        color:#fff;
+    }
+}
+
+.tabs-controls__title{
+    width: 215px;
+    padding: 0 10px 0 22px;
+    font-size: 18px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+//----------------------tabs content
+.tabs-content{
+    position: absolute;
+    z-index: 1;
+    top:1px;
+    right:1px;
+    width: 380px;
+    height: 240px;
+    &:after{
+        content: '';
+        position: absolute;
+        z-index: 5;
+        left:0;
+        bottom: 0;
+        width: 100%;
+        height: 30px;
+        background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+    }
+}
+
+.tabs-content__item{
+    display: none;
+    padding: 10px 40px 0 0;
+    height: 240px;
+    overflow: auto;
+    &.is-active{
+        display: block;
+    }
+}
+
+.tabs-content__list{
+    margin: 0;
+    padding: 0 0 30px 0;
+    list-style: none;
+    > li{
+        position: relative;
+        padding: 0 0 0 30px;
+        font-size: 14px;
+        line-height: 30px;
+        cursor: pointer;
+        &:after{
+            content: '';
+            position: absolute;
+            z-index: 2;
+            top:0;
+            right:-10px;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 15px 0 15px 10px;
+            border-color: transparent transparent transparent transparent;
+        }
+        &.is-active,
+        &.is-active:hover{
+            background-color: #c54004;
+            color:#fff;
+            &:after{
+                border-color: transparent transparent transparent #c54104;
+            }
+            .i-tabs{
+                display: block;
+            }
+        }
+        &:hover{
+            background-color: #4f4e4e;
+            color:#fff;
+            &:after{
+                border-color: transparent transparent transparent #4f4e4e;
+            }
+            .i-tabs{
+                display: block;
+            }
+        }
+        .i-tabs{
+            display: none;
+            position: absolute;
+            z-index: 3;
+            top:50%;
+            left:7px;
+            transform: translate(0,-50%);
+        }
+    }
+}

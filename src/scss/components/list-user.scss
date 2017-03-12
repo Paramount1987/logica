@@ -1,0 +1,68 @@
+#user-list{
+    max-width: 768px;
+    margin: 0 auto;
+    padding: 15px 0;
+    list-style: none;
+    > li{
+        padding: 10px;
+        border-top: 1px solid $color-gray--l4;
+    }
+}
+
+.user-item__inner{
+    display: table;
+    width: 100%;
+}
+
+.user-photo,
+.user-info,
+.user-edit{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.user-info{
+    width: calc(100% - 140px);
+    padding: 0 10px;
+}
+
+.user-info__name{
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.user-info__status{
+    margin-bottom: 10px;
+    color:green;
+}
+
+.user-info__status{
+    font-size: 18px;
+}
+
+.user-photo{
+    width: 80px;
+}
+
+.user-edit{
+    width: 60px;
+    padding: 0 10px;
+}
+
+.user-photo__img{
+    width: 100%;
+    max-width: 60px;
+    border: 1px solid $color-gray--l4;
+    border-radius: 100%;
+}
+
+.user-remove{
+    display: block;
+    width: 40px;
+    padding:  0 5px;
+    color:#fff;
+    border:none;
+    background-color: darkred;
+    text-align: center;
+    cursor: pointer;
+}
