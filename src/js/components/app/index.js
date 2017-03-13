@@ -27,7 +27,7 @@ const APP = {
 
         users.forEach((user)=>{
             _this.$userList.append(`<li class="user-item">
-                <div class="user-item__inner">
+                <div class="user-item__inner" data-userid="${user.id}">
                     <div class="user-photo"><img src="${user.photo}" alt="photo" class="user-photo__img"></div>
                     <div class="user-info">
                         <div class="user-info__name">${user.name}</div>
@@ -38,6 +38,9 @@ const APP = {
                 </div>
             </li>`)
         });
+
+        //---------------------swipe if touch device
+        _this.swipeToRemove();
     },
 
     clearUsersDom: function(){
@@ -81,6 +84,7 @@ const APP = {
         //----deny remove user and close modal
         $('body').on('click', '.js-btn-deny', function(){
             _this.removeModalUser();
+            _this.swipedBack();
         });
 
         //----confirm remove user
@@ -88,6 +92,31 @@ const APP = {
             _this.removeModalUser();
             _this.removeUser();
         });
+    },
+
+    swipeToRemove: function(){
+        if(!('ontouchstart' in document.documentElement)){
+            return;
+        }
+        let _this = this;
+
+        $('.user-item__inner').each(function(){
+
+            Hammer(this).on("swipeleft", function(e) {
+                let target = e.target.closest('.user-item__inner');
+
+                _this.currentUser = $(target).data('userid');
+                $(target).css({left: "-50px"}).addClass('is-swiped');
+
+                setTimeout(() => {_this.showModalUser()},200);
+            });
+        });
+    },
+
+    swipedBack: function(){
+        if('ontouchstart' in document.documentElement){
+            $('.is-swiped').css({left: "0"}).removeClass('is-swiped');
+        }
     }
 }
 
